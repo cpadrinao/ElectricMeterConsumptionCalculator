@@ -1,0 +1,56 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    overflow: hidden;
+}
+
+/* Background overlay with a tilted effect */
+.body-overlay {
+    position: absolute;
+    width: 250vw; /* Wider than the screen to cover all cases */
+    height: 250vh; /* Taller to accommodate all screen sizes */
+    left: 35%;
+    top: -70vh; /* Adjust to keep coverage */
+    background-color: rgba(0, 0, 0, 0.5);
+    transform-origin: top left;
+    animation: tiltAnimation 1s ease-in-out forwards;
+}
+
+
+
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(20.5deg);
+    }
+    100% {
+        transform: rotate(-17deg);
+    }
+}
+
+
+/* Ensuring text and image stay on top */
+.container {
+    position: relative;
+    z-index: 10;
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'Hepta Slab', serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: #DF735B;
+    margin-bottom: 30px;
+}
+
+/* Cat GIF styling */
+.catGif {
+    width: auto;
+    height: auto;
+}

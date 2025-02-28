@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Black overlay on the right */
+.body-overlay {
+    position: absolute;
+    width: 120vw; /* Wider than the screen to cover all cases */
+    height: 150vh; /* Taller to accommodate all screen sizes */
+    left: 50%;
+    top: -30vh; /* Adjust to keep coverage */
+    background-color: rgba(0, 0, 0, 0.5);
+    transform-origin: top left;
+    animation: tiltAnimation 1s ease-in-out forwards;
+}
+
+
+
+@keyframes tiltAnimation {
+    0% {
+        transform: rotate(-10.5deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+
+
+/* Main container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+/* Left Section */
+.leftSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.leftSection img {
+    width: 440px;
+    max-width: 100%;
+}
+
+/* Right Section */
+.rightSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* Monthly Consumption Box */
+.consumptionBox {
+    width: 100%;
+    max-width: 480px;
+    background: #DEE4FA;
+    padding: 15px 30px;
+    border-radius: 25px;
+    color: #1f2a5c;
+    font-weight: bold;
+    margin-bottom: 48px;
+}
+
+.consumptionBox h2 {
+    color: #1B1F2F;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.consumptionBox p {
+    color: #DF735B;
+    font-family: Hepta Slab;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Description */
+.description {
+    width: 100%;
+    color: #FFF;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+/* Billing Summary Box */
+.receiptSection {
+    width: 100%;
+    color: white;
+    margin-bottom: 48px;
+    font-family: Inter;
+}
+
+.receiptTotal {
+    font-size: 22px;
+    color: #DF735B;
+    font-weight: bold;
+}
+
+/* Back Button */
+#backButton {
+    width: 100%;
+    height: 60px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #DF735B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backButton:hover {
+    background: #c94c2b;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .leftSection {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leftSection img {
+        width: 70%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .rightSection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .consumptionBox, 
+    .receiptSection, 
+    .description, 
+    #backButton {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Fullscreen overlay fix */
+    .body-overlay {
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        transform: none;
+    }
+}
+
+/* Fix for Large Screens */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rightSection {
+        text-align: left;
+    }
+
+    .body-overlay {
+        width: 70vw;
+        height: 180vh;
+        right: -20vw;
+        top: -30vh;
+        transform: rotate(14deg);
+        transform-origin: top left;
+    }
+}

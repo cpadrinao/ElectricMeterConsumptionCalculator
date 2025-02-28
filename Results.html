@@ -1,0 +1,65 @@
+<!-- 
+    Owned by: Crisler Annilov B. Padrinao
+              Computer Science Student
+              University Of Nueva Caceres
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Consumption</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="results.css">
+    <script src="script.js"></script>
+
+    <!-- Favicon Logo -->
+    <link rel="icon" href="GIF/emcclogo.png">
+</head>
+<body>
+    
+    <div class="body-overlay"></div>
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-12 col-md-6">
+                <div class="leftSection">
+                    <img src="GIF/catWatching.gif" alt="Cat Watching">
+                </div>
+            </div>
+    
+            <!-- Right Section -->
+            <div class="col-12 col-md-6 text-md-start">
+                <div class="rightSection">
+                    <div class="consumptionBox">
+                        <h2>Monthly Consumption</h2>
+                        <p><span id="monthlyConsumption"></span> / kwh </p>
+                    </div>
+    
+                    <p class="description">Here are your electricity consumption details:</p>
+    
+                    <!-- Billing -->
+                    <div class="receiptSection">
+                        <h1>BILLING SUMMARY</h1>
+                        <p>Meter Number: <strong><em><span id="meterNumber"></span></em></strong> </p>
+                        <p>Previous Reading: <strong><em><span id="previousReading"></span></em></strong> kwh</p>
+                        <p>Current Reading: <strong><em><span id="currentReading"></span></em></strong> kwh</p>
+                        <p class="receiptTotal">Total Cost: <span id="totalCost"></span></p>
+                    </div>
+                    <button id="backButton">SAYONARA!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

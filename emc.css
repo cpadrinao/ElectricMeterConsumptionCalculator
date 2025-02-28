@@ -1,0 +1,125 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+body {
+    height: 100vh; 
+    margin: 0; 
+    background: linear-gradient(to bottom right, #DEE4FA, #5B78DF);
+    background-attachment: fixed;
+}
+
+#row {
+    margin: auto;
+    height: 100vh;
+}
+
+#firsthalf {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.windmillGif {
+    left: 198px;
+    max-width: calc(100% - 150px); /* Adjusts width dynamically */
+    margin-left: 200px;
+    overflow: hidden;
+}
+
+/* FIRST HALF */
+#txtheader {
+    font-family: Hepta Slab;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60.05px;
+    color: #DF735B;
+    margin: auto;
+}
+
+#txtdesc {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    /* line-height: 38.73px; */
+    color: #1B1F2F;
+    margin: auto;
+    margin-top: 5%;
+    text-align: justify;
+}
+
+/* SECOND HALF */
+#secondhalf {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    height: 2px;
+    color: white;
+}
+
+label {
+    font-family: Inter;
+    color: white;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+form {
+    margin: auto;
+    width: 700px;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0px solid;
+}
+
+input:focus {
+    outline: 3px solid #DF735B;
+}
+
+.form-group {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#btn {
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    padding: 10px;
+    background-color: #DF735B;
+    width: 100%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#btn:hover {
+    background-color: #ad5d4a;
+    color: white;
+    transition: 0.1s;
+}
+
+#btn:active {
+    background-color: #6b372a;
+    color: white;
+}
+
+
